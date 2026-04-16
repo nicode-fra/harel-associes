@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Harel & Associés — Cabinet d'expertise comptable, financière et juridique à Angers et Paris. Accompagnement sur-mesure des PME en Grand Ouest et Île-de-France." />
+  <title>Harel & Associés — Expertise Comptable, Angers & Paris</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header" role="banner">
+    <div class="header__inner container">
+      <a href="#hero" class="header__logo" aria-label="Harel & Associés — Accueil">
+        <img src="./img/LOGO.jpg" alt="Harel & Associés — Expertise Comptable" class="logo__img" />
+      </a>
+
+      <nav class="header__nav" id="main-nav" aria-label="Navigation principale">
+        <ul class="nav__list" role="list">
+          <li><a href="#services" class="nav__link">Nos services</a></li>
+          <li><a href="#equipe" class="nav__link">Notre équipe</a></li>
+          <li><a href="#honoraires" class="nav__link">Honoraires</a></li>
+          <li><a href="#rejoindre" class="nav__link">Rejoindre</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn--outline header__cta" aria-label="Prendre rendez-vous avec le cabinet">
+        Prendre rendez-vous
+      </a>
+
+      <button class="header__burger" id="burger-btn" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero__bg-grid" aria-hidden="true">
+        <svg class="grid-svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <g class="grid-lines" stroke="#7A5C4E" stroke-width="0.5" opacity="0.22">
+            <!-- vertical lines -->
+            <line x1="100" y1="0" x2="100" y2="600" class="grid-v" style="--i:1"/>
+            <line x1="200" y1="0" x2="200" y2="600" class="grid-v" style="--i:2"/>
+            <line x1="300" y1="0" x2="300" y2="600" class="grid-v" style="--i:3"/>
+            <line x1="400" y1="0" x2="400" y2="600" class="grid-v" style="--i:4"/>
+            <line x1="500" y1="0" x2="500" y2="600" class="grid-v" style="--i:5"/>
+            <line x1="600" y1="0" x2="600" y2="600" class="grid-v" style="--i:6"/>
+            <line x1="700" y1="0" x2="700" y2="600" class="grid-v" style="--i:7"/>
+            <!-- horizontal lines -->
+            <line x1="0" y1="100" x2="800" y2="100" class="grid-h" style="--i:1"/>
+            <line x1="0" y1="200" x2="800" y2="200" class="grid-h" style="--i:2"/>
+            <line x1="0" y1="300" x2="800" y2="300" class="grid-h" style="--i:3"/>
+            <line x1="0" y1="400" x2="800" y2="400" class="grid-h" style="--i:4"/>
+            <line x1="0" y1="500" x2="800" y2="500" class="grid-h" style="--i:5"/>
+          </g>
+          <!-- Growth curve -->
+          <path class="hero-curve" d="M 50 500 Q 200 480 300 380 Q 400 280 500 220 Q 600 160 750 80"
+            fill="none" stroke="#C0272D" stroke-width="2" opacity="0.5" stroke-dasharray="900" stroke-dashoffset="900"/>
+          <!-- Data points on curve -->
+          <circle class="hero-dot" cx="300" cy="380" r="4" fill="#C0272D" opacity="0"/>
+          <circle class="hero-dot" cx="500" cy="220" r="4" fill="#C0272D" opacity="0"/>
+          <circle class="hero-dot" cx="750" cy="80" r="6" fill="#C0272D" opacity="0"/>
+          <!-- Bar chart -->
+          <rect class="hero-bar" x="620" y="520" width="18" height="0" fill="#180B08" opacity="0.15" data-h="80"/>
+          <rect class="hero-bar" x="648" y="520" width="18" height="0" fill="#180B08" opacity="0.15" data-h="120"/>
+          <rect class="hero-bar" x="676" y="520" width="18" height="0" fill="#C0272D" opacity="0.3" data-h="160"/>
+          <rect class="hero-bar" x="704" y="520" width="18" height="0" fill="#180B08" opacity="0.15" data-h="100"/>
+          <rect class="hero-bar" x="732" y="520" width="18" height="0" fill="#C0272D" opacity="0.3" data-h="180"/>
+        </svg>
+      </div>
+
+      <div class="hero__content container">
+        <div class="hero__text">
+          <p class="hero__eyebrow reveal-up">Cabinet indépendant — Angers &amp; Paris</p>
+          <h1 class="hero__title reveal-up" id="hero-title" style="--delay: 0.1s">
+            Votre réussite mérite une<br />
+            <em>expertise sans compromis.</em>
+          </h1>
+          <p class="hero__subtitle reveal-up" style="--delay: 0.2s">
+            Cabinet d'expertise comptable, financière et juridique —<br />
+            accompagnement sur-mesure des PME en Grand Ouest &amp; Île-de-France
+          </p>
+          <div class="hero__ctas reveal-up" style="--delay: 0.3s">
+            <a href="#services" class="btn btn--primary">Découvrir nos services</a>
+            <a href="#contact" class="btn btn--ghost">Nous contacter</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#reassurance" class="hero__scroll-indicator" aria-label="Défiler vers le bas">
+        <span class="scroll-text">Défiler</span>
+        <span class="scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ==================== RÉASSURANCE ==================== -->
+    <section class="reassurance" id="reassurance" aria-label="Chiffres clés du cabinet">
+      <div class="container">
+        <div class="reassurance__grid">
+
+          <div class="reassurance__item reveal-up">
+            <div class="reassurance__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" stroke="#C0272D" stroke-width="1.5"/>
+                <path d="M12 28 L12 20 M20 28 L20 14 M28 28 L28 10" stroke="#C0272D" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="reassurance__stat">
+              <span class="stat-number dm-mono" data-target="20" data-suffix="+">0</span>
+              <span class="stat-label">ans d'expérience cumulée</span>
+            </div>
+          </div>
+
+          <div class="reassurance__item reveal-up" style="--delay: 0.15s">
+            <div class="reassurance__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="14" width="14" height="14" rx="2" stroke="#C0272D" stroke-width="1.5"/>
+                <rect x="22" y="14" width="14" height="14" rx="2" stroke="#C0272D" stroke-width="1.5"/>
+                <rect x="13" y="4" width="14" height="14" rx="2" stroke="#C0272D" stroke-width="1.5"/>
+                <line x1="20" y1="20" x2="20" y2="28" stroke="#C0272D" stroke-width="1"/>
+                <line x1="11" y1="20" x2="20" y2="20" stroke="#C0272D" stroke-width="1"/>
+                <line x1="29" y1="20" x2="20" y2="20" stroke="#C0272D" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="reassurance__stat">
+              <span class="stat-number dm-mono" data-target="3" data-suffix="">0</span>
+              <span class="stat-label">pôles d'expertise complémentaires</span>
+            </div>
+          </div>
+
+          <div class="reassurance__item reveal-up" style="--delay: 0.3s">
+            <div class="reassurance__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4 L4 14 L4 28 Q12 36 20 38 Q28 36 36 28 L36 14 Z" stroke="#C0272D" stroke-width="1.5" fill="none"/>
+                <path d="M13 20 L18 25 L27 15" stroke="#C0272D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="reassurance__stat">
+              <span class="stat-number dm-mono">PME</span>
+              <span class="stat-label">accompagnées en Grand Ouest &amp; Île-de-France</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-header reveal-up">
+          <span class="section-label">Nos expertises</span>
+          <h2 class="section-title" id="services-title">
+            Un accompagnement sur-mesure,<br />
+            <em>de la création à la transmission</em>
+          </h2>
+        </header>
+
+        <div class="services__grid">
+
+          <article class="service-card reveal-up" style="--delay: 0s">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="8" width="32" height="32" rx="3" stroke="#180B08" stroke-width="1.5"/>
+                <line x1="15" y1="20" x2="33" y2="20" stroke="#C0272D" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="15" y1="27" x2="33" y2="27" stroke="#C0272D" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="15" y1="34" x2="24" y2="34" stroke="#C0272D" stroke-width="1.5" stroke-linecap="round"/>
+                <rect x="12" y="12" width="8" height="5" rx="1" fill="#180B08" opacity="0.15"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Obligations légales</h3>
+            <p class="service-card__desc">Tenue et révision comptable, établissement des comptes annuels, déclarations fiscales et sociales. Nous veillons à votre conformité réglementaire.</p>
+            <a href="#contact" class="service-card__link" aria-label="En savoir plus sur les obligations légales">En savoir plus <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card reveal-up" style="--delay: 0.1s">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="8,38 18,26 26,32 40,14" stroke="#180B08" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <circle cx="40" cy="14" r="3" fill="#C0272D"/>
+                <line x1="8" y1="38" x2="44" y2="38" stroke="#888F97" stroke-width="1" opacity="0.3"/>
+                <line x1="8" y1="8" x2="8" y2="38" stroke="#888F97" stroke-width="1" opacity="0.3"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Pilotage &amp; Performance</h3>
+            <p class="service-card__desc">Tableaux de bord sur-mesure, reporting de gestion, prévisionnel et analyse de rentabilité pour piloter votre activité avec clarté.</p>
+            <a href="#contact" class="service-card__link" aria-label="En savoir plus sur le pilotage et la performance">En savoir plus <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card reveal-up" style="--delay: 0.2s">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 6 L8 14 L8 28 Q16 40 24 42 Q32 40 40 28 L40 14 Z" stroke="#180B08" stroke-width="1.5" fill="none"/>
+                <path d="M24 14 L16 18 L16 27 Q20 33 24 34 Q28 33 32 27 L32 18 Z" fill="#C0272D" opacity="0.15"/>
+                <path d="M18 23 L22 27 L30 18" stroke="#C0272D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Protection du patrimoine</h3>
+            <p class="service-card__desc">Audit et restructuration juridique, choix de la forme sociale, optimisation fiscale dans le respect des règles. Sécurisez ce que vous avez construit.</p>
+            <a href="#contact" class="service-card__link" aria-label="En savoir plus sur la protection du patrimoine">En savoir plus <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card reveal-up" style="--delay: 0.3s">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="16" stroke="#180B08" stroke-width="1.5" fill="none"/>
+                <path d="M24 14 L24 24 L32 24" stroke="#C0272D" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="24" cy="24" r="2" fill="#C0272D"/>
+                <line x1="24" y1="8" x2="24" y2="10" stroke="#180B08" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                <line x1="24" y1="38" x2="24" y2="40" stroke="#180B08" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                <line x1="8" y1="24" x2="10" y2="24" stroke="#180B08" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                <line x1="38" y1="24" x2="40" y2="24" stroke="#180B08" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Optimisation de la rentabilité</h3>
+            <p class="service-card__desc">Analyse des marges, réduction des coûts cachés, mise en place d'indicateurs de suivi et de contrôle de gestion adapté à votre secteur.</p>
+            <a href="#contact" class="service-card__link" aria-label="En savoir plus sur l'optimisation de la rentabilité">En savoir plus <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card reveal-up" style="--delay: 0.4s">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="16" r="8" stroke="#180B08" stroke-width="1.5" fill="none"/>
+                <path d="M10 40 Q10 30 24 30 Q38 30 38 40" stroke="#180B08" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                <line x1="30" y1="20" x2="40" y2="12" stroke="#C0272D" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="36" y1="12" x2="40" y2="12" stroke="#C0272D" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="40" y1="12" x2="40" y2="16" stroke="#C0272D" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Patrimoine des dirigeants</h3>
+            <p class="service-card__desc">Ingénierie patrimoniale, stratégie de rémunération, prévoyance et retraite. Nous alignons la performance de l'entreprise avec votre patrimoine personnel.</p>
+            <a href="#contact" class="service-card__link" aria-label="En savoir plus sur le patrimoine des dirigeants">En savoir plus <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card reveal-up" style="--delay: 0.5s">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="18" width="16" height="20" rx="2" stroke="#180B08" stroke-width="1.5" fill="none"/>
+                <rect x="26" y="10" width="16" height="28" rx="2" stroke="#C0272D" stroke-width="1.5" fill="none"/>
+                <line x1="22" y1="24" x2="26" y2="24" stroke="#180B08" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 1"/>
+                <line x1="16" y1="12" x2="28" y2="12" stroke="#C0272D" stroke-width="1" opacity="0.4"/>
+                <path d="M14 12 L14 18" stroke="#180B08" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Acquisition d'entreprise</h3>
+            <p class="service-card__desc">Audit d'acquisition, évaluation de cibles, structuration juridique et fiscale de la reprise ou de la cession. Du diagnostic à la signature.</p>
+            <a href="#contact" class="service-card__link" aria-label="En savoir plus sur l'acquisition d'entreprise">En savoir plus <span aria-hidden="true">→</span></a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== APPROCHE ==================== -->
+    <section class="approche" id="approche" aria-labelledby="approche-title">
+      <div class="approche__pattern" aria-hidden="true">
+        <svg width="100%" height="100%" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="grid-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#7A5C4E" stroke-width="0.5" opacity="0.25"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid-pattern)"/>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="approche__layout">
+          <div class="approche__editorial reveal-left">
+            <span class="section-label">Notre philosophie</span>
+            <h2 class="section-title" id="approche-title">
+              L'expertise au service<br />
+              <em>de votre ambition</em>
+            </h2>
+            <p class="approche__text">
+              Chez Harel &amp; Associés, nous croyons que la relation entre un expert-comptable et son client est avant tout une relation de confiance. Elle se construit dans la durée, sur la base d'une écoute attentive et d'un conseil ancré dans la réalité de votre activité.
+            </p>
+            <p class="approche__text">
+              Notre approche pluridisciplinaire — comptabilité, droit, ingénierie patrimoniale — nous permet de vous offrir des solutions globales et cohérentes, sans redondance ni angle mort. Chaque dossier est traité avec la même exigence, quelle que soit la taille de l'entreprise.
+            </p>
+            <p class="approche__text">
+              Nous ne livrons pas des liasses. Nous construisons avec vous une vision de votre entreprise, de sa valeur et de son avenir.
+            </p>
+          </div>
+
+          <div class="approche__points">
+
+            <div class="approche__point reveal-right" style="--delay: 0s">
+              <div class="point__icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="8" width="26" height="18" rx="2" stroke="#C0272D" stroke-width="1.5" fill="none"/>
+                  <line x1="9" y1="14" x2="23" y2="14" stroke="#180B08" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="9" y1="19" x2="18" y2="19" stroke="#180B08" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M9 6 L9 10 M16 4 L16 10 M23 6 L23 10" stroke="#C0272D" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                </svg>
+              </div>
+              <div class="point__content">
+                <h3 class="point__title">Transparence des honoraires</h3>
+                <p class="point__text">Nos tarifs sont discutés et fixés en amont. Pas de surprises, pas de surcoûts cachés. Le prix de notre accompagnement reflète sa valeur réelle.</p>
+              </div>
+            </div>
+
+            <div class="approche__point reveal-right" style="--delay: 0.15s">
+              <div class="point__icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="10" r="5" stroke="#C0272D" stroke-width="1.5" fill="none"/>
+                  <circle cx="22" cy="14" r="4" stroke="#180B08" stroke-width="1.5" fill="none"/>
+                  <path d="M4 28 Q4 22 12 22 Q16 22 18 24" stroke="#C0272D" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                  <path d="M18 24 Q20 22 22 22 Q28 22 28 28" stroke="#180B08" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="point__content">
+                <h3 class="point__title">Équipe pluridisciplinaire</h3>
+                <p class="point__text">Experts-comptables, juristes et spécialistes patrimoniaux travaillent en synergie sur votre dossier. Une vision à 360° pour des conseils sans angle mort.</p>
+              </div>
+            </div>
+
+            <div class="approche__point reveal-right" style="--delay: 0.3s">
+              <div class="point__icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="16,3 20,11 29,12 22,19 24,28 16,24 8,28 10,19 3,12 12,11" stroke="#C0272D" stroke-width="1.5" fill="none"/>
+                  <polygon points="16,9 18,14 23,14 19,17 20.5,22 16,19.5 11.5,22 13,17 9,14 14,14" fill="#C0272D" opacity="0.15"/>
+                </svg>
+              </div>
+              <div class="point__content">
+                <h3 class="point__title">Solutions globales et cohérentes</h3>
+                <p class="point__text">Nous intégrons toutes les dimensions de votre situation — fiscale, juridique, sociale, patrimoniale — pour des recommandations cohérentes et durables.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ÉQUIPE ==================== -->
+    <section class="equipe" id="equipe" aria-labelledby="equipe-title">
+      <div class="container">
+        <header class="section-header reveal-up">
+          <span class="section-label">Les associés</span>
+          <h2 class="section-title" id="equipe-title">Des experts à votre écoute</h2>
+        </header>
+
+        <div class="equipe__grid">
+
+          <article class="membre-card reveal-up" style="--delay: 0s">
+            <div class="membre-card__avatar" role="button" tabindex="0" aria-expanded="false" aria-controls="bio-harel" title="Voir le profil">
+              <img src="./img/laurent-harel.jpg" alt="Laurent Harel, associé fondateur" class="membre-card__photo" />
+              <div class="avatar__accent"></div>
+              <div class="avatar__hint" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><line x1="7" y1="1" x2="7" y2="13" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="1" y1="7" x2="13" y2="7" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+            <div class="membre-card__bio" id="bio-harel" aria-hidden="true">
+              <p>Laurent HAREL a créé Harel &amp; Associés en 2004 après 15 ans d'expérience en expertise comptable et commissariat aux comptes auprès d'entreprises de toutes tailles, dont certaines cotées en bourse et de tous secteurs d'activité. Il dirige l'activité conseil en transmission d'entreprises, restructuration et gestion de patrimoine.</p>
+            </div>
+            <div class="membre-card__info">
+              <h3 class="membre-card__name">Laurent Harel</h3>
+              <p class="membre-card__role">Associé fondateur</p>
+              <p class="membre-card__title">Expert-comptable &amp; Commissaire aux comptes</p>
+              <p class="membre-card__spec">Stratégie d'entreprise &bull; Ingénierie patrimoniale</p>
+            </div>
+          </article>
+
+          <article class="membre-card reveal-up" style="--delay: 0.15s">
+            <div class="membre-card__avatar" role="button" tabindex="0" aria-expanded="false" aria-controls="bio-humeau" title="Voir le profil">
+              <img src="./img/helene-humeau.jpg" alt="Hélène Humeau, associée et directrice expertise-comptable" class="membre-card__photo" />
+              <div class="avatar__accent"></div>
+              <div class="avatar__hint" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><line x1="7" y1="1" x2="7" y2="13" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="1" y1="7" x2="13" y2="7" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+            <div class="membre-card__bio" id="bio-humeau" aria-hidden="true">
+              <p>Diplômée école de commerce et titulaire du DSCG, Hélène HUMEAU intègre Harel &amp; Associés en 2007. Elle dirige l'activité expertise comptable et intervient en matière de conseil en transmission d'entreprises, restructuration et gestion de patrimoine.</p>
+            </div>
+            <div class="membre-card__info">
+              <h3 class="membre-card__name">Hélène Humeau</h3>
+              <p class="membre-card__role">Associée</p>
+              <p class="membre-card__title">Directrice Expertise-Comptable</p>
+              <p class="membre-card__spec">Comptabilité &bull; Gestion sociale &bull; PME &amp; ETI</p>
+            </div>
+          </article>
+
+          <article class="membre-card reveal-up" style="--delay: 0.3s">
+            <div class="membre-card__avatar" role="button" tabindex="0" aria-expanded="false" aria-controls="bio-blanchard" title="Voir le profil">
+              <img src="./img/bruno-blanchard.jpg" alt="Bruno Blanchard, associé développement et transmission" class="membre-card__photo" />
+              <div class="avatar__accent"></div>
+              <div class="avatar__hint" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><line x1="7" y1="1" x2="7" y2="13" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="1" y1="7" x2="13" y2="7" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+            <div class="membre-card__bio" id="bio-blanchard" aria-hidden="true">
+              <p>Bruno BLANCHARD a créé et dirigé à Londres trois entreprises du secteur agroalimentaire. Il a fondé le Club Business en 2005, réseau de dirigeants en Pays de Loire et Île-de-France. Il intervient en matière d'intermédiation en transmission d'entreprises.</p>
+            </div>
+            <div class="membre-card__info">
+              <h3 class="membre-card__name">Bruno Blanchard</h3>
+              <p class="membre-card__role">Associé</p>
+              <p class="membre-card__title">Développement &amp; Transmission</p>
+              <p class="membre-card__spec">M&amp;A &bull; Évaluation d'entreprise &bull; Cession</p>
+            </div>
+          </article>
+
+          <article class="membre-card reveal-up" style="--delay: 0.45s">
+            <div class="membre-card__avatar" role="button" tabindex="0" aria-expanded="false" aria-controls="bio-lucas" title="Voir le profil">
+              <img src="./img/fabien-lucas.jpg" alt="Fabien Lucas, associé et directeur juridique" class="membre-card__photo" />
+              <div class="avatar__accent"></div>
+              <div class="avatar__hint" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><line x1="7" y1="1" x2="7" y2="13" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="1" y1="7" x2="13" y2="7" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+            <div class="membre-card__bio" id="bio-lucas" aria-hidden="true">
+              <p>Titulaire d'un Master 2 Droit des Affaires — spécialité Droit des Entreprises — de l'Université d'Angers. Il dirige l'activité Droit des Affaires, notamment en matière de Droit des sociétés, Droit social et Droit commercial.</p>
+            </div>
+            <div class="membre-card__info">
+              <h3 class="membre-card__name">Fabien Lucas</h3>
+              <p class="membre-card__role">Associé</p>
+              <p class="membre-card__title">Directeur Juridique</p>
+              <p class="membre-card__spec">Droit des sociétés &bull; Contrats &bull; Restructurations</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== HONORAIRES ==================== -->
+    <section class="honoraires" id="honoraires" aria-labelledby="honoraires-title">
+      <div class="honoraires__bg" aria-hidden="true">
+        <svg width="100%" height="100%" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.08">
+            <line x1="0" y1="80" x2="600" y2="80" stroke="#7A5C4E" stroke-width="1"/>
+            <line x1="0" y1="160" x2="600" y2="160" stroke="#7A5C4E" stroke-width="1"/>
+            <line x1="0" y1="240" x2="600" y2="240" stroke="#7A5C4E" stroke-width="1"/>
+            <line x1="0" y1="320" x2="600" y2="320" stroke="#7A5C4E" stroke-width="1"/>
+            <line x1="100" y1="0" x2="100" y2="400" stroke="#888F97" stroke-width="1"/>
+            <line x1="200" y1="0" x2="200" y2="400" stroke="#888F97" stroke-width="1"/>
+            <line x1="300" y1="0" x2="300" y2="400" stroke="#888F97" stroke-width="1"/>
+            <line x1="400" y1="0" x2="400" y2="400" stroke="#888F97" stroke-width="1"/>
+            <line x1="500" y1="0" x2="500" y2="400" stroke="#888F97" stroke-width="1"/>
+          </g>
+        </svg>
+      </div>
+      <div class="container">
+        <div class="honoraires__content reveal-up">
+          <span class="section-label section-label--light">Tarification</span>
+          <h2 class="section-title section-title--light" id="honoraires-title">
+            Des honoraires transparents<br />
+            <em>et maîtrisés</em>
+          </h2>
+
+          <blockquote class="honoraires__quote reveal-up" style="--delay: 0.1s">
+            <p>"Nous considérons les honoraires comme un objectif,<br />non comme un résultat."</p>
+            <footer>— La philosophie Harel &amp; Associés</footer>
+          </blockquote>
+
+          <p class="honoraires__text reveal-up" style="--delay: 0.2s">
+            Parce que la confiance se construit aussi sur la transparence financière, nous établissons avec chaque client une lettre de mission précise. Vos honoraires sont définis en amont, en fonction de la nature et de la complexité de la mission, et non ajustés après coup.
+          </p>
+          <p class="honoraires__text reveal-up" style="--delay: 0.25s">
+            Cette approche vous permet de budgéter sereinement votre accompagnement, et nous engage à délivrer une prestation de qualité constante.
+          </p>
+
+          <a href="./docs/HAA-bareme-honoraires.pdf" download="HAA-bareme-honoraires.pdf" class="btn btn--gold reveal-up" style="--delay: 0.35s">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 14 L3 16 L15 16 L15 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="9" y1="2" x2="9" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <polyline points="5,9 9,13 13,9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Télécharger nos barèmes
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== REJOINDRE ==================== -->
+    <section class="rejoindre" id="rejoindre" aria-labelledby="rejoindre-title">
+      <div class="container">
+        <div class="rejoindre__layout">
+
+          <div class="rejoindre__left reveal-left">
+            <span class="section-label">Carrières</span>
+            <h2 class="section-title" id="rejoindre-title">
+              Rejoignez une équipe<br />
+              <em>fondée sur la confiance</em>
+            </h2>
+            <p class="rejoindre__text">
+              Harel &amp; Associés grandit avec des collaborateurs qui partagent les mêmes valeurs : le goût du travail bien fait, l'autonomie dans l'action et le sens de la relation client.
+            </p>
+            <ul class="rejoindre__valeurs" role="list">
+              <li class="valeur-item">
+                <span class="valeur-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C0272D" stroke-width="1.5"/><path d="M7 10 L9 12 L13 8" stroke="#C0272D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span><strong>Autonomie</strong> — vos dossiers, votre gestion</span>
+              </li>
+              <li class="valeur-item">
+                <span class="valeur-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C0272D" stroke-width="1.5"/><path d="M7 10 L9 12 L13 8" stroke="#C0272D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span><strong>Responsabilité</strong> — vous êtes l'interlocuteur de vos clients</span>
+              </li>
+              <li class="valeur-item">
+                <span class="valeur-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C0272D" stroke-width="1.5"/><path d="M7 10 L9 12 L13 8" stroke="#C0272D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span><strong>Mérite</strong> — votre évolution reflète votre investissement</span>
+              </li>
+              <li class="valeur-item">
+                <span class="valeur-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#C0272D" stroke-width="1.5"/><path d="M7 10 L9 12 L13 8" stroke="#C0272D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <span><strong>Formation continue</strong> — accompagnement vers l'expertise</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rejoindre__right reveal-right">
+            <form class="form" id="candidature-form" novalidate aria-label="Formulaire de candidature spontanée">
+              <h3 class="form__title">Candidature spontanée</h3>
+
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="cand-prenom" class="form__label">Prénom <span aria-hidden="true">*</span></label>
+                  <input type="text" id="cand-prenom" name="prenom" class="form__input" required autocomplete="given-name" placeholder="Marie" />
+                </div>
+                <div class="form__group">
+                  <label for="cand-nom" class="form__label">Nom <span aria-hidden="true">*</span></label>
+                  <input type="text" id="cand-nom" name="nom" class="form__input" required autocomplete="family-name" placeholder="Dupont" />
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label for="cand-email" class="form__label">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="cand-email" name="email" class="form__input" required autocomplete="email" placeholder="marie.dupont@exemple.fr" />
+              </div>
+
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="cand-niveau" class="form__label">Niveau d'études</label>
+                  <select id="cand-niveau" name="niveau" class="form__select">
+                    <option value="">Sélectionner…</option>
+                    <option value="bac">Bac +2/3 (BTS, DUT, Licence)</option>
+                    <option value="m1">Bac +4/5 (Master, DSCG)</option>
+                    <option value="expertise">Expert-comptable diplômé</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                </div>
+                <div class="form__group">
+                  <label for="cand-domaine" class="form__label">Domaine</label>
+                  <select id="cand-domaine" name="domaine" class="form__select">
+                    <option value="">Sélectionner…</option>
+                    <option value="comptabilite">Comptabilité / Gestion</option>
+                    <option value="rh">Ressources Humaines / Paie</option>
+                    <option value="droit">Droit des affaires</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label for="cand-message" class="form__label">Message de motivation</label>
+                <textarea id="cand-message" name="message" class="form__textarea" rows="4" placeholder="Présentez-vous et exprimez votre intérêt pour le cabinet…"></textarea>
+              </div>
+
+              <div class="form__group">
+                <label for="cand-cv" class="form__label">CV (PDF)</label>
+                <div class="form__file-wrapper">
+                  <input type="file" id="cand-cv" name="cv" class="form__file-input" accept=".pdf" aria-describedby="cv-hint" />
+                  <label for="cand-cv" class="form__file-label" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2 L9 11 M5 7 L9 11 L13 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 14 L3 16 L15 16 L15 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    <span id="cv-label-text">Choisir un fichier PDF…</span>
+                  </label>
+                </div>
+                <p class="form__hint" id="cv-hint">Format PDF uniquement · 5 Mo maximum</p>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full">Envoyer ma candidature</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-header reveal-up">
+          <span class="section-label">Contact</span>
+          <h2 class="section-title" id="contact-title">
+            Parlons de <em>votre projet</em>
+          </h2>
+        </header>
+
+        <div class="contact__layout">
+
+          <div class="contact__form-col reveal-left">
+            <form class="form" id="contact-form" novalidate aria-label="Formulaire de contact">
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="ct-nom" class="form__label">Nom complet <span aria-hidden="true">*</span></label>
+                  <input type="text" id="ct-nom" name="nom" class="form__input" required autocomplete="name" placeholder="Jean Martin" />
+                </div>
+                <div class="form__group">
+                  <label for="ct-email" class="form__label">Email <span aria-hidden="true">*</span></label>
+                  <input type="email" id="ct-email" name="email" class="form__input" required autocomplete="email" placeholder="j.martin@societe.fr" />
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label for="ct-tel" class="form__label">Téléphone</label>
+                <input type="tel" id="ct-tel" name="tel" class="form__input" autocomplete="tel" placeholder="02 41 00 00 00" />
+              </div>
+
+              <div class="form__group">
+                <label for="ct-objet" class="form__label">Objet <span aria-hidden="true">*</span></label>
+                <select id="ct-objet" name="objet" class="form__select" required>
+                  <option value="">Sélectionner un sujet…</option>
+                  <option value="expertise">Expertise comptable</option>
+                  <option value="juridique">Conseil juridique</option>
+                  <option value="patrimoine">Patrimoine dirigeant</option>
+                  <option value="acquisition">Acquisition / Cession</option>
+                  <option value="autre">Autre demande</option>
+                </select>
+              </div>
+
+              <div class="form__group">
+                <label for="ct-message" class="form__label">Votre message <span aria-hidden="true">*</span></label>
+                <textarea id="ct-message" name="message" class="form__textarea" rows="5" required placeholder="Décrivez votre situation et vos besoins…"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--full">Envoyer le message</button>
+            </form>
+          </div>
+
+          <div class="contact__info-col reveal-right">
+            <div class="contact__info-block">
+              <h3 class="contact__info-title">Notre cabinet</h3>
+              <address class="contact__address">
+                <div class="contact__address-item">
+                  <svg class="contact__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2 C6.686 2 4 4.686 4 8 C4 13 10 18 10 18 C10 18 16 13 16 8 C16 4.686 13.314 2 10 2 Z" stroke="#C0272D" stroke-width="1.5" fill="none"/><circle cx="10" cy="8" r="2.5" stroke="#C0272D" stroke-width="1.5" fill="none"/></svg>
+                  <div>
+                    <strong>Angers (siège)</strong><br />
+                    9, rue Joseph Fourier<br />
+                    49070 Beaucouzé
+                  </div>
+                </div>
+                <div class="contact__address-item">
+                  <svg class="contact__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4 C3 3.45 3.45 3 4 3 L7 3 L8.5 7 L6.5 8.5 C7.5 10.7 9.3 12.5 11.5 13.5 L13 11.5 L17 13 L17 16 C17 16.55 16.55 17 16 17 C8.82 17 3 11.18 3 4 Z" stroke="#C0272D" stroke-width="1.5" fill="none"/></svg>
+                  <div>
+                    <a href="tel:+33241200194" class="contact__tel">02 41 20 01 94</a>
+                  </div>
+                </div>
+                <div class="contact__address-item">
+                  <svg class="contact__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2 C6.686 2 4 4.686 4 8 C4 13 10 18 10 18 C10 18 16 13 16 8 C16 4.686 13.314 2 10 2 Z" stroke="#888F97" stroke-width="1.5" fill="none" opacity="0.5"/><circle cx="10" cy="8" r="2.5" stroke="#888F97" stroke-width="1.5" fill="none" opacity="0.5"/></svg>
+                  <div class="contact__secondary-address">
+                    <strong>Paris</strong> — Également présents en Île-de-France
+                  </div>
+                </div>
+              </address>
+            </div>
+
+            <div class="contact__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.5!2d-0.6355!3d47.4890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDI5JzIwLjQiTiAwwrAzOCcwNy44Ilc!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr&q=9+rue+Joseph+Fourier+49070+Beaucouz%C3%A9"
+                title="Localisation du cabinet Harel & Associés à Beaucouzé (49)"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                aria-label="Carte Google Maps indiquant l'emplacement du cabinet"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner container">
+      <div class="footer__brand">
+        <a href="#hero" class="footer__logo" aria-label="Harel & Associés — retour en haut">
+          <img src="./img/LOGO.jpg" alt="Harel & Associés" class="logo__img logo__img--footer" />
+        </a>
+        <p class="footer__baseline">Précision &bull; Écoute &bull; Excellence</p>
+        <a href="https://www.linkedin.com/company/harel-associes" class="footer__linkedin" target="_blank" rel="noopener noreferrer" aria-label="Harel & Associés sur LinkedIn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <line x1="7" y1="10" x2="7" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="7" cy="7.5" r="1" fill="currentColor"/>
+            <path d="M11 10 L11 17 M11 13 C11 11 17 11 17 13 L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navigation pied de page">
+        <h4 class="footer__nav-title">Navigation</h4>
+        <ul role="list">
+          <li><a href="#services">Nos services</a></li>
+          <li><a href="#equipe">Notre équipe</a></li>
+          <li><a href="#honoraires">Honoraires</a></li>
+          <li><a href="#rejoindre">Rejoindre</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contact-col">
+        <h4 class="footer__nav-title">Nous trouver</h4>
+        <address>
+          9, rue Joseph Fourier<br />
+          49070 Beaucouzé<br />
+          <a href="tel:+33241200194">02 41 20 01 94</a>
+        </address>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2025 Harel &amp; Associés · Tous droits réservés</p>
+        <div class="footer__legal-links">
+          <a href="#" aria-label="Mentions légales">Mentions légales</a>
+          <span aria-hidden="true">&bull;</span>
+          <a href="#" aria-label="Politique de confidentialité">Politique de confidentialité</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
