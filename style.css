@@ -356,7 +356,7 @@ input, select, textarea {
 }
 .nav__link--active::after {
   transform: scaleX(1);
-  background: #4CAF50;
+  background: #F2EAE0;
 }
 
 /* Burger */
