@@ -1438,12 +1438,13 @@ input, select, textarea {
     margin-top: 2px;
   }
 
-  /* Burger agrandi pour les doigts (44×44px) */
+  /* Burger agrandi pour les doigts (44×44px) — poussé à droite */
   .header__burger {
     display: flex;
     width: 44px;
     height: 44px;
     padding: 10px;
+    margin-left: auto;
   }
 
   .header__cta { display: none; }
