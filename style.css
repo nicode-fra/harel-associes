@@ -1363,47 +1363,108 @@ input, select, textarea {
   border-left: 3px solid var(--color-gold);
 }
 
+.toast.toast--error {
+  background: #7f1d1d;
+  color: var(--color-white);
+  border-left: 3px solid #ef4444;
+}
+
 .toast.toast--visible {
   transform: translateY(0);
   opacity: 1;
 }
 
 /* ----------------------------------------------------------------
-   17. RESPONSIVE — 1200px breakpoint
+   17. RESPONSIVE — 1200px (petits desktops)
    ---------------------------------------------------------------- */
 @media (max-width: 1200px) {
   .services__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .equipe__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* ----------------------------------------------------------------
-   18. RESPONSIVE — 768px breakpoint (tablet/mobile)
+   18. RESPONSIVE — 1024px (tablettes)
+   ---------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  :root {
+    --space-xl: 5rem;
+  }
+
+  .approche__layout {
+    gap: 3rem;
+  }
+
+  .rejoindre__layout {
+    gap: 3rem;
+  }
+
+  .contact__layout {
+    gap: 2.5rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+  }
+
+  .footer__inner {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ----------------------------------------------------------------
+   19. RESPONSIVE — 768px (mobile paysage / tablette portrait)
    ---------------------------------------------------------------- */
 @media (max-width: 768px) {
   :root {
-    --space-lg: 3rem;
-    --space-xl: 4.5rem;
+    --space-lg: 2.5rem;
+    --space-xl: 3.5rem;
   }
 
-  /* Header */
+  /* ── Header ── */
+  .header__inner {
+    height: 64px;
+  }
+
+  .logo__img {
+    height: 60px;
+  }
+
+  .header__logo {
+    margin-top: 2px;
+  }
+
+  /* Burger agrandi pour les doigts (44×44px) */
+  .header__burger {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+  }
+
+  .header__cta { display: none; }
+
+  /* Menu mobile slide-down */
   .header__nav {
     position: fixed;
-    top: 95px;
+    top: 64px;
     left: 0;
     right: 0;
     background: var(--color-navy);
-    padding: 1.5rem var(--container-pad) 2rem;
+    padding: 0.5rem var(--container-pad) 1.5rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 8px 32px rgba(24, 11, 8, 0.5);
     transform: translateY(-110%);
     opacity: 0;
     transition: transform 0.4s var(--ease-out), opacity 0.4s;
     pointer-events: none;
+    z-index: 99;
+    /* safe area iOS en bas si menu plein écran */
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
   }
 
   .header__nav.is-open {
@@ -1417,9 +1478,12 @@ input, select, textarea {
     gap: 0;
   }
 
+  /* Liens avec zone tactile 48px minimum */
   .nav__link {
-    display: block;
-    padding: 0.85rem 0;
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 0.75rem 0;
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.75);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -1427,66 +1491,109 @@ input, select, textarea {
   .nav__link:hover { color: var(--color-white); }
   .nav__link::after { display: none; }
 
-  .header__cta { display: none; }
-  .header__burger { display: flex; }
-
-  /* Hero */
-  .hero__title {
-    font-size: clamp(1.9rem, 7vw, 2.8rem);
+  /* ── Hero ── */
+  .hero {
+    padding-top: 64px;
+    min-height: 100svh;
+    /* safe area iOS en bas */
+    padding-bottom: env(safe-area-inset-bottom);
   }
+
+  .hero__content {
+    padding: var(--space-lg) 0;
+  }
+
+  .hero__title {
+    font-size: clamp(1.75rem, 6.5vw, 2.6rem);
+  }
+
+  .hero__title br { display: none; }
   .hero__subtitle br { display: none; }
+  .hero__subtitle { font-size: 0.95rem; }
   .hero__scroll-indicator { display: none; }
 
-  /* Reassurance */
+  .hero__ctas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Boutons pleins largeur sur mobile + hauteur tactile */
+  .hero__ctas .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+
+  /* ── Boutons globaux — hauteur tactile ── */
+  .btn {
+    min-height: 44px;
+  }
+
+  /* ── Reassurance ── */
   .reassurance__grid {
     grid-template-columns: 1fr;
     gap: 0;
   }
   .reassurance__item {
     border-left: none;
-    border-bottom: 1px solid rgba(184, 150, 62, 0.15);
+    border-bottom: 1px solid rgba(122, 92, 78, 0.2);
   }
 
-  /* Services */
+  /* ── Services ── */
   .services__grid {
     grid-template-columns: 1fr;
   }
 
-  /* Approche */
+  /* ── Approche ── */
   .approche__layout {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
   .approche__points { padding-top: 0; }
 
-  /* Équipe */
+  /* ── Équipe ── */
   .equipe__grid {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 
   .membre-card__photo {
-    width: 140px;
-    height: 140px;
+    width: min(140px, 55vw);
+    height: min(140px, 55vw);
   }
 
   .membre-card__avatar {
     padding: 1.25rem 1.25rem 0;
   }
 
-  /* Rejoindre */
+  /* Bio max-height augmentée pour petits écrans */
+  .membre-card.is-open .membre-card__bio {
+    max-height: 300px;
+  }
+
+  /* ── Honoraires ── */
+  .honoraires__quote {
+    padding: 1.75rem;
+    margin: 1.5rem auto;
+  }
+  .honoraires__quote::before {
+    font-size: 3.5rem;
+    top: -1rem;
+  }
+
+  /* ── Rejoindre ── */
   .rejoindre__layout {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 
-  /* Contact */
+  /* ── Contact ── */
   .contact__layout {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 
-  /* Footer */
+  /* ── Footer ── */
   .footer__inner {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1498,19 +1605,152 @@ input, select, textarea {
     gap: 0.5rem;
   }
 
-  /* Forms */
+  /* ── Honoraires — bouton PDF plein largeur ── */
+  .honoraires__content .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ── Formulaires ── */
   .form__row {
     grid-template-columns: 1fr;
   }
-  .form { padding: 1.75rem; }
+  .form { padding: 1.5rem; }
+
+  /* Inputs plus hauts pour les doigts */
+  .form__input,
+  .form__select,
+  .form__textarea {
+    min-height: 44px;
+    font-size: 1rem; /* évite le zoom iOS sur les inputs */
+  }
 }
 
+/* ----------------------------------------------------------------
+   20. RESPONSIVE — 480px (mobile portrait)
+   ---------------------------------------------------------------- */
 @media (max-width: 480px) {
+  :root {
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+  }
+
+  /* Logo encore plus compact */
+  .header__inner { height: 58px; }
+  .logo__img { height: 52px; }
+
+  .hero { padding-top: 58px; }
+
+  /* Nav dropdown alignée sous le header 58px */
+  .header__nav { top: 58px; }
+
+  /* Équipe : 1 colonne */
   .equipe__grid {
     grid-template-columns: 1fr;
   }
-  .hero__ctas { flex-direction: column; }
-  .hero__ctas .btn { text-align: center; justify-content: center; }
+
+  .membre-card__photo {
+    width: min(160px, 50vw);
+    height: min(160px, 50vw);
+  }
+
+  /* Section labels en moins de lettres */
+  .hero__eyebrow { letter-spacing: 0.12em; }
+
+  /* Formulaire encore plus compact */
+  .form { padding: 1.25rem; }
+
+  /* Quote honoraires sans guillemet décoratif */
+  .honoraires__quote::before { display: none; }
+  .honoraires__quote { margin-top: 1.25rem; }
+
+  /* Toast plein largeur sur mobile */
+  .toast {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    max-width: none;
+  }
+}
+
+/* ----------------------------------------------------------------
+   21. iOS SAFE AREA — notch / home indicator
+   ---------------------------------------------------------------- */
+@supports (padding: env(safe-area-inset-top)) {
+  .header {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .footer__bottom {
+    padding-bottom: calc(1.25rem + env(safe-area-inset-bottom));
+  }
+
+  .hero {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* ----------------------------------------------------------------
+   22. TOUCH DEVICES — désactive les hover effects
+   ---------------------------------------------------------------- */
+@media (hover: none) and (pointer: coarse) {
+  /* Cartes services : pas de lift au survol */
+  .service-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-sm);
+    border-left-color: transparent;
+  }
+
+  /* Cartes équipe : lift seulement quand ouverte */
+  .membre-card:not(.is-open):hover {
+    transform: none;
+    box-shadow: var(--shadow-sm);
+  }
+  .membre-card:not(.is-open):hover .membre-card__photo {
+    transform: none;
+    filter: none;
+  }
+
+  /* Boutons : pas de lift */
+  .btn--primary:hover,
+  .btn--gold:hover,
+  .btn--ghost:hover,
+  .btn--outline:hover {
+    transform: none;
+  }
+
+  /* Nav : pas de soulignement au survol (géré par classe active) */
+  .nav__link:hover::after { transform: scaleX(0); }
+  .nav__link--active::after { transform: scaleX(1); }
+}
+
+/* ----------------------------------------------------------------
+   23. PREFERS-REDUCED-MOTION — CSS
+   ---------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Révèle immédiatement tous les éléments cachés par les animations */
+  .reveal-up,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Bio ouverte instantanément */
+  .membre-card__bio {
+    transition: none !important;
+  }
 }
 
 /* ----------------------------------------------------------------
