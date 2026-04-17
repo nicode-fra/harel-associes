@@ -265,7 +265,7 @@ input, select, textarea {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  height: 95px;
+  height: 60px;
 }
 
 /* Logo */
@@ -274,11 +274,10 @@ input, select, textarea {
   align-items: center;
   flex-shrink: 0;
   line-height: 1;
-  margin-top: 3px;
 }
 
 .logo__img {
-  height: 95px;
+  height: 39px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -404,7 +403,7 @@ input, select, textarea {
   align-items: center;
   overflow: hidden;
   background: var(--color-bg);
-  padding-top: 95px;
+  padding-top: 60px;
 }
 
 .hero__bg-grid {
@@ -1425,18 +1424,7 @@ input, select, textarea {
     --space-xl: 3.5rem;
   }
 
-  /* ── Header ── */
-  .header__inner {
-    height: 64px;
-  }
-
-  .logo__img {
-    height: 60px;
-  }
-
-  .header__logo {
-    margin-top: 2px;
-  }
+  /* ── Header — logo 39px, header 60px identique au desktop ── */
 
   /* Burger agrandi pour les doigts (44×44px) — poussé à droite */
   .header__burger {
@@ -1452,7 +1440,7 @@ input, select, textarea {
   /* Menu mobile slide-down */
   .header__nav {
     position: fixed;
-    top: 64px;
+    top: 60px;
     left: 0;
     right: 0;
     background: var(--color-navy);
@@ -1494,7 +1482,7 @@ input, select, textarea {
 
   /* ── Hero ── */
   .hero {
-    padding-top: 64px;
+    padding-top: 60px;
     min-height: 100svh;
     /* safe area iOS en bas */
     padding-bottom: env(safe-area-inset-bottom);
@@ -1635,15 +1623,6 @@ input, select, textarea {
     --space-lg: 2rem;
     --space-xl: 3rem;
   }
-
-  /* Logo encore plus compact */
-  .header__inner { height: 58px; }
-  .logo__img { height: 52px; }
-
-  .hero { padding-top: 58px; }
-
-  /* Nav dropdown alignée sous le header 58px */
-  .header__nav { top: 58px; }
 
   /* Équipe : 1 colonne */
   .equipe__grid {
